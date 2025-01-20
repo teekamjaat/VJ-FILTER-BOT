@@ -2715,15 +2715,15 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
         )
         temp.IMDB_CAP[message.from_user.id] = cap
         if not settings["button"]:
-            cap+="<b>\n\n<u>🍿 Your Movie Files 👇</u></b>\n"
+            cap+="<b>\n\n<u></u></b>\n"
             for file in files:
                 cap += f"<b>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file['file_id']}'>[{get_size(file['file_size'])}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file['file_name'].split()))}\n</a></b>"
     else:
         if settings["button"]:
-            cap = f"<b>𝐻𝑒𝑟𝑒 𝐼 𝐹𝑜𝑢𝑛𝑑 𝐹𝑜𝑟 𝑌𝑜𝑢𝑟 𝑆𝑒𝑎𝑟𝑐ℎ 🔎 ☞ {search}</b>"
+            cap = f"<b>Hᴇʀᴇ I Fᴏᴜɴᴅ Fᴏʀ Yᴏᴜʀ Sᴇᴀʀᴄʜ🔎{search}</b>"
         else:
-            cap = f"<b>𝐻𝑒𝑟𝑒 𝐼 𝐹𝑜𝑢𝑛𝑑 𝐹𝑜𝑟 𝑌𝑜𝑢𝑟 𝑆𝑒𝑎𝑟𝑐ℎ 🔎 ☞ {search}</b>"
-            cap+="<b><u>🍿 Your Movie Files 👇</u></b>\n\n"
+            cap = f"<b>Hᴇʀᴇ I Fᴏᴜɴᴅ Fᴏʀ Yᴏᴜʀ Sᴇᴀʀᴄʜ🔎{search}</b>"
+            cap+="<b><u></u></b>\n\n"
             for file in files:
                 cap += f"<b>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file['file_id']}'>[{get_size(file['file_size'])}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file['file_name'].split()))}\n\n</a></b>"
 
